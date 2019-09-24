@@ -16,6 +16,7 @@ public class Mian {
 
         //getAnnotations() 该方法获取 该类上使用的那些注解
         Annotation[] annotation = forName.getAnnotations();
+
         for (Annotation annotation1 : annotation){
             System.out.println("该类上使用的那些注解 "+annotation1);
         }
