@@ -1,0 +1,188 @@
+深入理解Java多线程与并发编程
+课程目标:
+熟悉多线程之间线程安全问题、同步、锁。
+需求
+演示线程安全问题，引入一个业务需求，火车站现在有100张票，现在有两个窗口同时抢火车票，实现这段代码。
+①线程安全问题
+
+ 1 class Dog implements Runnable {
+ 2     // 定义线程共享数据
+ 3     private int t = 100;
+ 4
+ 5     @Override
+ 6     public void run() {
+ 7         // TODO：死循环，暂不处理
+ 8         while (true) {
+ 9             if (t > 0) {
+10
+11                 System.out.println("当前线程：" + Thread.currentThread().getName() + "---" + t--);
+12             }
+13         }
+14     }
+15 }
+16
+17 public class ThreadDemo {
+18     public static void main(String[] args) {
+19         System.out.println("当前线程：" + Thread.currentThread().getName());
+20         Dog dog = new Dog();
+21
+22         Thread thread = new Thread(dog);
+23         Thread thread2 = new Thread(dog);
+24         thread.start();
+25         thread2.start();
+26
+27     }
+28 }
+
+开启两个线程，共享数据t=100，执行run方法中的代码：当t大于0时，打印t--。分析一下可能会存在的问题：
+
+因为CPU时间片快速切换的不确定性，该问题不一定会发生，为了模拟一下该问题的发生，在打印语句执行前，让线程睡眠0.1秒：
+
+ 1 @Override
+ 2 public void run() {
+ 3     while (true) {
+ 4         if (t > 0) {
+ 5             try {
+ 6                 Thread.sleep(100);
+ 7                 System.out.println("当前线程：" + Thread.currentThread().getName() + "---" + t--);
+ 8             } catch (InterruptedException e) {
+ 9                 //TODO:暂不处理异常
+10             }
+11         }
+12     }
+13 }
+
+ 
+问题产生的原因
+首先我们想到是因为两个线程共享了数据t。如果多个线程不涉及数据共享，各自执行自己的代码，就不会出现这个问题。在线程不安全的单例模式中，就涉及到这个问题。
+①多个线程共享了数据。
+如果我们不判断t>0，直接打印t--，或者只判断t>0，不执行t--，只要循环不结束，程序不终止，从逻辑上来说，程序也没有问题
+②在线程任务中设计对共享数据的操作(这里的操作包括①判断t>0；②执行t--)，一个线程在操作共享数据的时候，其他的线程也操作了共享数据。
+这时候就可能造成数据出错。
+总结来说，多个线程在执行同一段代码的时候，每次的执行结果和单线程执行的结果都是一样的，不存在执行结果的二义性，就可以称作是线程安全的。线程安全问题多是由全局变量和静态变量引起的，当多个线程对共享数据只执行读操作，不执行写操作时，一般是线程安全的；当多个线程都执行写操作时，需要考虑线程同步来解决线程安全问题。
+画图演示
+
+②线程同步之synchronized
+中我们说到多线程可能引发的安全问题，原因在于多个线程共享了数据，且一个线程在操作(多为写操作)数据的过程中，另一个线程也对数据进行了操作，从而导致数据出错。由此我们想到一个解决的思路：将操作共享数据的代码行作为一个整体，同一时间只允许一个线程执行，执行过程中其他线程不能参与执行。线程同步就是用来实现这样的机制。
+synchronized代码块
+　　Java中提供了synchronized关键字，将可能引发安全问题的代码包裹在synchronized代码块中，表示这些代码需要进行线程同步。synchronized代码块的语法格式为：
+1 synchronized (expression){
+2     //需要同步的代码
+3 }
+其中，expression必须是一个引用类型的变量，这里我们可以理解为任意的一个Java对象，否则编译出错。下面的例子中我们使用了一个Object对象obj。
+
+ 1 class Dog implements Runnable {
+ 2     private int t = 100;
+ 3     private Object obj = new Object();
+ 4
+ 5     @Override
+ 6     public void run() {
+ 7         while (true) {
+ 8
+ 9             synchronized (obj) {
+10                 if (t > 0) {
+11                     try {
+12                         Thread.sleep(100);
+13                         System.out.println("当前线程：" + Thread.currentThread().getName() + "---" + t--);
+14                     } catch (InterruptedException e) {}
+15                 }
+16             }
+17
+18         }
+19     }
+20 }
+
+这时候，一个线程在执行完整个代码块(或者非正常结束)之后，其他的线程才有机会进入代码块执行，就不会出现“打印的t小于1”的情况了，简单的实现了代码的同步。
+线程同步的机制和同步锁
+　　上面线程同步的效果是怎么实现的呢？Java中任意的对象都可以作为一个监听器(monitor)，监听器可以被上锁和解锁，在线程同步中称为同步锁，且同步锁在同一时间只能被一个线程所持有。上面的obj对象就是一个同步锁，分析一下上面代码的执行过程：
+一个线程执行到synchronized代码块，首先检查obj，如果obj为空，抛出NullPointerExpression异常；
+如果obj不为空，线程尝试给监听器上锁，如果监听器已经被锁，则线程不能获取到锁，线程就被阻塞；
+如果监听器没被锁，则线程将监听器上锁，并且持有该锁，然后执行代码块；
+代码块正常执行结束或者非正常结束，监听器都将自动解锁；
+所以，一个线程执行代码块时，持有了同步锁，其他线程就不能获取到锁，也就不能进入代码块执行，只能等待锁被释放。这时候我们思考这样一个问题：在synchronized代码块中如果我们每次传入的都是一个新的对象，能否实现同步的效果呢？如下：
+
+ 1     public void run() {
+ 2         while (true) {
+ 3             synchronized (new Object()) {
+ 4                 if (t > 0) {
+ 5                     try {
+ 6                         Thread.sleep(100);
+ 7                         System.out.println("当前线程：" + Thread.currentThread().getName() + "---" + t--);
+ 8                     } catch (InterruptedException e) {}
+ 9                 }
+10             }
+11         }
+12     }
+
+显然多个线程检查的都是一个新的对象，不同的同步锁对不同的线程不具有排他性，不能实现线程同步的效果，这时候线程同步就失效了。所以线程同步的一个前提：线程同步锁对多个线程必须是互斥的，即多个线程需要使用同一个同步锁。第一段代码中obj对象被多个线程共享，能够实现同步。
+synchronized方法
+　　除了synchronized代码块，synchronized关键字还可以修饰方法，让该方法进行线程同步，效果跟同步代码块一样。
+
+ 1     public synchronized void run() {
+ 2         while (true) {
+ 3             if (t > 0) {
+ 4                 try {
+ 5                     Thread.sleep(100);
+ 6                     System.out.println("当前线程：" + Thread.currentThread().getName() + "---" + t--);
+ 7                 } catch (InterruptedException e) {}
+ 8             }
+ 9         }
+10     }
+
+这时候synchronized后面没有了expression，从哪儿获取同步锁呢？
+对于实例的同步方法，使用this即当前实例对象，如上面的dog；
+对于静态的同步方法，使用当前类的字节码对象，如上面的Dog.class。
+也就是说使用同步方法的话，同步锁只能是this或者当前类的字节码对象。所以根据同步锁必须互斥的前提，如果同时使用synchronized代码块和synchronized方法对同一个共享资源进行线程同步，synchronized代码块的同步锁也必须跟synchronized方法一样(要么是this，要么是类的字节码对象)。
+同步代码块和同步方法的区别
+两者的区别主要体现在同步锁上面。对于实例的同步方法，因为只能使用this来作为同步锁，如果一个类中需要使用到多个锁，为了避免锁的冲突，必然需要使用不同的对象，这时候同步方法不能满足需求，只能使用同步代码块(同步代码块可以传入任意对象)；或者多个类中需要使用到同一个锁，这时候多个类的实例this显然是不同的，也只能使用同步代码块，传入同一个对象。
+②什么是死锁？
+什么是死锁呢？
+就是在多线程中，多个线程持有的锁，不释放，就会导致死锁。
+就是在多线程中在同步中嵌套同步
+演示代码
+class Test implements Runnable {
+private boolean flag;
+	Test(boolean flag) {
+		this.flag = flag;
+	}
+	public void run() {
+		if (flag) {
+			while (true) {
+				synchronized (MyLock.locka) {
+					System.out.println(Thread.currentThread().getName() + "...if locka ");
+					synchronized (MyLock.lockb) {
+						System.out.println(Thread.currentThread().getName() + "..if lockb");
+					}
+				}
+			}
+		} else {
+			while (true) {
+				synchronized (MyLock.lockb) {
+					System.out.println(Thread.currentThread().getName() + "..else lockb");
+					synchronized (MyLock.locka) {
+						System.out.println(Thread.currentThread().getName() + ".....else locka");
+					}
+				}
+			}
+		}
+	}
+}
+class MyLock {
+	static Object locka = new Object();
+	static Object lockb = new Object();
+}
+class DeadLockTest1 {
+	public static void main(String[] args) {
+		Thread t1 = new Thread(new Test(true));
+		Thread t2 = new Thread(new Test(false));
+		t1.start();
+		t2.start();
+	}
+}
+演示结果
+
+停止掉了，不执行代码。
+
+
+
+
