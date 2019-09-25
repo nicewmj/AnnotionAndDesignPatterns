@@ -1,0 +1,222 @@
+多线程之间通讯
+课程目标:
+熟练多线程之间通讯Wait、Notify、NotifyAll用法
+需求:分别创建两个线程，名称为A和B，A线程负责写操作，也就是不停的写入名称和性别。 B线程负责读取操作，也就是不停的读取现在写入的名称和性别，看图演示
+
+
+
+线程间通信
+思路：多个线程在操作同一个资源，但是操作的动作却不一样。
+1：将资源封装成对象。
+2：将线程执行的任务(任务其实就是run方法。)也封装成对象。
+代码实现:
+class Res {
+	String name;
+	String sex;
+	boolean flag;
+}
+
+/**
+ * 写入操作
+ * 
+ * @author 蚂蚁课堂网站创始人-余胜军
+ *
+ */
+class Input implements Runnable {
+	private Res res;
+
+	public Input(Res res) {
+		this.res = res;
+	}
+
+	@Override
+	public void run() {
+		int i = 0;
+		while (true) {
+			synchronized (res) {
+				if (res.flag) {
+					try {
+						res.wait();
+					} catch (InterruptedException e) {
+					}
+				}
+				if (i == 0) {
+					res.name = "余胜军";
+					res.sex = "男";
+				} else {
+					res.name = "小红";
+					res.sex = "女";
+				}
+				i = (i + 1) % 2;
+				res.flag = true;
+				res.notify();
+			}
+
+		}
+
+	}
+}
+
+/**
+ * 读取操作
+ * 
+ * @author 蚂蚁课堂网站创始人-余胜军
+ *
+ */
+class ReadInput implements Runnable {
+	private Res res;
+
+	public ReadInput(Res res) {
+		this.res = res;
+	}
+
+	@Override
+	public void run() {
+		while (true) {
+			synchronized (res) {
+				if (!res.flag)
+					try {
+						res.wait();
+					} catch (Exception e) {
+					}
+				System.out.println("name:" + res.name + "--sex:" + res.sex);
+				res.flag = false;
+				res.notify();
+			}
+
+		}
+	}
+
+}
+
+public class TestThread {
+	public static void main(String[] args) {
+		Res res = new Res();
+		Input input = new Input(res);
+		ReadInput readInput = new ReadInput(res);
+		Thread thread = new Thread(input);
+		Thread thread1 = new Thread(readInput);
+		thread.start();
+		thread1.start();
+	}
+}
+
+等待唤醒机制
+涉及的方法：
+wait:将同步中的线程处于冻结状态。释放了执行权，释放了资格。同时将线程对象存储到线程池中。
+notify：唤醒线程池中某一个等待线程。
+notifyAll:唤醒的是线程池中的所有线程。
+注意：
+1：这些方法都需要定义在同步中。 
+2：因为这些方法必须要标示所属的锁。
+	你要知道 A锁上的线程被wait了,那这个线程就相当于处于A锁的线程池中，只能A锁的notify唤醒。
+3：这三个方法都定义在Object类中。为什么操作线程的方法定义在Object类中？
+	因为这三个方法都需要定义同步内，并标示所属的同步锁，既然被锁调用，而锁又可以是任意对象，那么能被任意对象调用的方法一定定义在Object类中。
+Wait和Sleep区别
+分析这两个方法：从执行权和锁上来分析：
+wait：可以指定时间也可以不指定时间。不指定时间，只能由对应的notify或者notifyAll来唤醒。
+sleep：必须指定时间，时间到自动从冻结状态转成运行状态(临时阻塞状态)。
+wait：线程会释放执行权，而且线程会释放锁。
+Sleep：线程会释放执行权，但不是不释放锁。
+
+线程的停止
+通过stop方法就可以停止线程。但是这个方式过时了。
+停止线程：原理就是：让线程运行的代码结束，也就是结束run方法。
+怎么结束run方法？一般run方法里肯定定义循环。所以只要结束循环即可。
+第一种方式：定义循环的结束标记。
+第二种方式：如果线程处于了冻结状态，是不可能读到标记的，这时就需要通过Thread类中的interrupt方法，将其冻结状态强制清除。让线程恢复具备执行资格的状态，让线程可以读到标记，并结束。
+
+
+
+
+Lock关键字用法
+提到Java中的锁，相信大家都知道它是用来控制多个线程访问共享资源的方式(即锁能防止多个线程同时访问空享资源而出现线程安全问题)。在实践过程中使用最多的也最常见的锁就是 synchronized 在jdk1.5之前也仅仅有这一种锁而已。在jdk1.5之后，并发包中新增了Lock接口(以及相关实现类)用来实现锁功能，Lock接口提供了与synchronized关键字类似的同步功能，但需要在使用时手动获取锁和释放锁。虽然Lock接口没有synchronized关键字自动获取和释放锁那么便捷，但Lock接口却具有了锁的可操作性，可中断获取以及超时获取锁等多种非常实用的同步特性，除此之外Lock接口还有两个非常强大的实现类重入锁和读写锁，下面一一讲解这些内容。
+原因:
+jdk1.5 中提供给了多线程升级解决方案。
+将同步synchronized替换成实Lock操作
+将Object中的wait、notify、notifyAll，替换了Condition对象。
+该对象可以Lock锁 ，进行获取。
+Lock接口的使用
+Lock lock  = new ReentrantLock();
+lock.lock();
+try{
+//可能会出现线程安全的操作
+}finally{
+//一定在finally中释放锁
+//也不能把获取锁在try中进行，因为有可能在获取锁的时候抛出异常
+lock.ublock();
+}
+Lock接口与synchronized关键字的区别
+Lock接口可以尝试非阻塞地获取锁 当前线程尝试获取锁。如果这一时刻锁没有被其他线程获取到，则成功获取并持有锁。 
+Lock接口能被中断地获取锁 与synchronized不同，获取到锁的线程能够响应中断，当获取到的锁的线程被中断时，中断异常将会被抛出，同时锁会被释放。
+Lock接口在指定的截止时间之前获取锁，如果截止时间到了依旧无法获取锁，则返回。
+Lock接口的API
+void lock() 获取锁,调用该方法当前线程将会获取锁，当锁获取后，该方法将返回。
+void lockInterruptibly() throws InterruptedException 可中断获取锁，与lock()方法不同之处在于该方法会响应中断，即在锁的获取过程中可以中断当前线程
+boolean tryLock() 尝试非阻塞的获取锁，调用该方法立即返回，true表示获取到锁
+boolean tryLock(long time,TimeUnit unit) throws InterruptedException 超时获取锁，以下情况会返回：时间内获取到了锁，时间内被中断，时间到了没有获取到锁。
+void unlock() 释放锁
+
+了解Lock接口最常用的实现ReentrantLock重入锁
+
+ReentrantLock是Lock接口一种常见的实现，它是支持重进入的锁即表示该锁能够支持一个线程对资源的重复加锁。该锁还支持获取锁时的公平与非公平的选择。 
+关于锁的重进入，其实synchronized关键字也支持。如前所述，synchronized关键字也是隐式的支持重进入而对于ReentrantLock而言，对于已经获取到锁的线程，再次调用lock()方法时依然可以获取锁而不被阻塞。 
+ 理解了锁的重进入，现在解释刚刚提到的公平获取锁与非公平获取锁。如果在绝对时间上，先对于锁进行获取的请求一定先被满足，那么这个锁就是公平的，反之就是非公平的。公平的获取锁也就是等待时间最久的线程优先获取到锁。ReentrantLock的构造函数来控制是否为公平锁。
+我在第一次了解到公平锁于非公平锁的时候，第一反应是公平锁的效率高，应该使用公平锁。但实际的情况是，非公平的锁的效率远远大于公平锁。
+
+了解Lock接口的实现类ReentrantReadWriteLock读写锁
+前面提到的ReentrantLock是排他锁，该锁在同一时刻只允许一个线程来访问，而读写锁在同一时刻允许可以有多个线程来访问，但在写线程访问时，所有的读线程和其他写线程被阻塞。读写锁维护了一对锁，一个读锁和一个写锁，通过读写锁分离，使得并发性相比一般的排他锁有了很大的提升。
+读写锁除了使用在写操作happends-before与读操作以及并发性的提升之外，读写锁也能够简化读写交互场景的编程方式。假设在程序中定义一个共享的用作缓存数据结构，它的大部分时间提供读服务(查询，搜索等)而写操作较少，但写操作之后需要立即对后续的读操作可见。在没有读写锁之前，实现这个功能需要使用等待通知机制(http://blog.csdn.net/canot/article/details/50879963)。无论使用那种方式，目的都是为了写操作立即可见于读操作而避免脏读。但使用读写锁却比等待通知简单明了多了。 
+一般情况下，读写锁性能优于排他锁。它能提供更好的并发性和吞吐量。
+
+ReentrantReadWriteLock读写锁的几个特性:
+公平选择性
+重进入
+锁降级
+
+读写锁的示例:缓存
+public class Cache{
+  static Map<String,Object> map = new HashMap<String,Object>();
+  static ReentrantReadWriteLock  rwl = new ReentrantReadWriteLock();
+  static Lock rLock = rwl.readLock();
+  static Lock wLock = rwl.writeLock();
+  //获取一个key对应的value
+  public static final Object get(String key){
+  r.lock();
+  try{
+   return map.get(key);
+   }finally{
+    r.unlock();
+    }
+  }
+  //设置key对应的value并返回旧的value
+  public static fianl Object put(String key,Object value){
+  w.lock();
+  try{
+   return map.put(key,value);
+   }final{
+   w.unlock();
+    }
+  }
+  //清空缓存
+  public static fianl void clear(){
+  w.lock();
+  try{
+     map.clear();
+   } finally{
+    w.unlock();
+    }
+  }
+}
+
+上述缓存示例中，我们使用了一个非线程安全的HashMap作为缓存的时候然后使用读写锁来保证线程安全。Cache使用读写锁提升读操作的并发性，也保证每次写操作对读操作的及时可见性，同时简化了编程方式。
+读写锁的锁降级
+锁降级是指写锁降级成为读锁。如果当前线程持有写锁，然后将其释放再获取读锁的过程不能称为锁降级。锁降级指的在持有写锁的时候再获取读锁,获取到读锁后释放之前写锁的过程称为锁释放。
+锁降级在某些情况下是非常必要的，主要是为了保证数据的可见性。如果当前线程不获取读锁而直接释放写锁，假设此时另外一个线程获取了写锁并修改了数据。那么当前线程无法感知该线程的数据更新。
+
+join()用法
+join()方法使调用该方法的线程在此之前执行完毕，也就是等待该方法的线程执行完毕后再往下继续执行。注意该方法也需要捕捉异常。
+该影响只存在于执行join方法的线程和调用该线程的线程之间
+如在t1线程中调用t2.join(),则需要t2线程执行完后t1方能继续执行
+
+
