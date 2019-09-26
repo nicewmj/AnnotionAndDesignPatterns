@@ -1,4 +1,4 @@
-package com.itwei.annotion;
+package com.itwei.annotion注解;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

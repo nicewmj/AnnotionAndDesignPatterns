@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dffa399-5343-436c-b3ca-bb5e39e2d576" name="Default Changelist" comment="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考">
-      <change afterPath="$PROJECT_DIR$/src/main/java/JASON的使用/fastjson的解析.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Students.xml" afterDir="false" />
+    <list default="true" id="8dffa399-5343-436c-b3ca-bb5e39e2d576" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/Mian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/Mian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/Mian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/SetPorpert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/SetPorpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/SetPorpert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/SetTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/SetTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/SetTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/Host.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/jdkproxy_jdk代理/Host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/NewJdkProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/NewJdkProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/jdkproxy_jdk代理/NewJdkProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/newcglibproxy/cglib.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/newcglibproxy/cglib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/newcglibproxy_cglib代理/cglib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/staticproxy/XiaoMing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/staticproxy/XiaoMing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/staticproxy_静态代理/XiaoMing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/staticproxy/host.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itwei/annotion/staticproxy/host.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itwei/staticproxy_静态代理/host.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test_threadpool/FixedThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/FixedThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test_threadpool/LockThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/LockThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadText" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadText" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test_threadpool/Tongbusuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/Tongbusuo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,53 +38,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/Tongbusuo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/LockThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-              <folding>
-                <element signature="e#145#146#0" expanded="true" />
-                <element signature="e#177#178#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-              <folding>
-                <element signature="e#289#290#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1358#1359#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
               <caret line="53" selection-start-line="53" selection-end-line="53" />
@@ -96,17 +70,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/Students.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="9" />
+            <state relative-caret-position="189">
+              <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/staticproxy_静态代理/XiaoMing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/Mian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/SetPorpert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/SetTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/UserEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+            <state relative-caret-position="434">
+              <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,6 +179,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/Students.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/staticproxy_静态代理/XiaoMing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/UserEntity.java" />
       </list>
     </option>
   </component>
@@ -461,14 +482,6 @@
               <item name="AnnotionAndDesignPatterns" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="JASON的使用" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestAnnotion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AnnotionAndDesignPatterns" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -482,7 +495,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569487280218" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569488151909" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -513,7 +526,7 @@
       <module name="TestAnnotion" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_threadpool.*" />
+          <option name="PATTERN" value="test_threadpool测试线程池.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -522,11 +535,11 @@
       </method>
     </configuration>
     <configuration name="TestSpeakThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_threadpool.TestSpeakThread" />
+      <option name="MAIN_CLASS_NAME" value="test_threadpool测试线程池.TestSpeakThread" />
       <module name="TestAnnotion" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_threadpool.*" />
+          <option name="PATTERN" value="test_threadpool测试线程池.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -535,11 +548,11 @@
       </method>
     </configuration>
     <configuration name="TestThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_threadpool.TestThread" />
+      <option name="MAIN_CLASS_NAME" value="test_threadpool测试线程池.TestThread" />
       <module name="TestAnnotion" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_threadpool.*" />
+          <option name="PATTERN" value="test_threadpool测试线程池.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -602,7 +615,7 @@
       <updated>1569292670831</updated>
       <workItem from="1569292672048" duration="3653000" />
       <workItem from="1569296343133" duration="18697000" />
-      <workItem from="1569397238138" duration="10689000" />
+      <workItem from="1569397238138" duration="12367000" />
     </task>
     <task id="LOCAL-00001" summary="threadpool">
       <created>1569397437678</created>
@@ -625,17 +638,24 @@
       <option name="project" value="LOCAL" />
       <updated>1569413427745</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="json xml 的解析">
+      <created>1569487307980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569487307981</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33039000" />
+    <option name="totallyTimeSpent" value="34717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -645,7 +665,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29858848" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2247557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -676,59 +696,60 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="threadpool" />
     <MESSAGE value="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考" />
-    <option name="LAST_COMMIT_MESSAGE" value="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考" />
+    <MESSAGE value="json xml 的解析" />
+    <option name="LAST_COMMIT_MESSAGE" value="json xml 的解析" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/Mian.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/Mian.java</url>
           <line>14</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/Tongbusuo.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/Tongbusuo.java</url>
           <line>34</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java</url>
           <line>86</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java</url>
           <line>66</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java</url>
           <line>30</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java</url>
           <line>39</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java</url>
           <line>58</line>
-          <properties class="test_threadpool.ReadInput" method="&lt;init&gt;">
+          <properties class="test_threadpool测试线程池.ReadInput" method="run">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java</url>
           <line>22</line>
-          <properties class="test_threadpool.input" method="&lt;init&gt;">
+          <properties class="test_threadpool测试线程池.input" method="run">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="7" />
@@ -738,14 +759,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/XiaoMing.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/staticproxy/host.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/staticproxy_静态代理/host.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/Host.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/jdkproxy_jdk代理/Host.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
@@ -755,14 +776,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/staticproxy/XiaoMing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/newcglibproxy/cglib.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/newcglibproxy_cglib代理/cglib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
@@ -772,14 +786,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/Mian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/FixedThreadPool.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/FixedThreadPool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
@@ -795,14 +802,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadText">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadText">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/NewJdkProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/jdkproxy_jdk代理/NewJdkProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
@@ -821,14 +828,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/Tongbusuo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/Tongbusuo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="513">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/LockThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/LockThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
@@ -846,7 +853,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
@@ -859,7 +866,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool测试线程池/ThreadSpeakUntil">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
@@ -890,20 +897,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Students.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+        <state relative-caret-position="434">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Students.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/staticproxy_静态代理/XiaoMing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/Mian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/SetPorpert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/SetTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/itwei/annotion注解/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>

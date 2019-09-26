@@ -1,9 +1,7 @@
-package com.itwei.annotion;
+package com.itwei.annotion注解;
 
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 
 /**
  * 表的别名

@@ -1,6 +1,4 @@
-package test_threadpool;
-
-import java.util.concurrent.ThreadLocalRandom;
+package test_threadpool测试线程池;
 
 /**
  * 演示线程安全问题，引入一个业务需求，火车站现在有100张票，现在有两个窗口同时抢火车票，实现这段代码。

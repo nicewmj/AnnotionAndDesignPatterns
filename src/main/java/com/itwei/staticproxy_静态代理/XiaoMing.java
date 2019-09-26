@@ -1,4 +1,4 @@
-package com.itwei.annotion.staticproxy;
+package com.itwei.staticproxy_静态代理;
 
 /**
  * 静态代理需要自己生成代理类

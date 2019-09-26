@@ -1,8 +1,7 @@
-package com.itwei.annotion;
+package com.itwei.annotion注解;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-import java.net.SocketTimeoutException;
 
 /**
  * select user_name,user_age from user_table
@@ -12,7 +11,7 @@ public class Mian {
     public static void main(String[] args) throws Exception{
         //项目使用注解肯定会用到反射
         //反射的场景 JDBC spring IOC 常用的框架 一些注解的实现
-        Class<?> forName = Class.forName("com.itwei.annotion.UserEntity");
+        Class<?> forName = Class.forName("com.itwei.annotion注解.UserEntity");
 
         //getAnnotations() 该方法获取 该类上使用的那些注解
         Annotation[] annotation = forName.getAnnotations();

@@ -1,6 +1,6 @@
-package com.itwei.annotion.jdkproxy;
+package com.itwei.jdkproxy_jdk代理;
 
-import com.itwei.annotion.staticproxy.host;
+import com.itwei.staticproxy_静态代理.host;
 
 /**
  * 买房子代理接口

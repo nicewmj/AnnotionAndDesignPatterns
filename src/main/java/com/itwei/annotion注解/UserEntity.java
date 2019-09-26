@@ -1,4 +1,4 @@
-package com.itwei.annotion;
+package com.itwei.annotion注解;
 
 @SetTable("user_table")
 public class UserEntity {

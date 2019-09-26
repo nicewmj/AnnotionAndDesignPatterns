@@ -1,4 +1,4 @@
-package com.itwei.annotion.jdkproxy;
+package com.itwei.jdkproxy_jdk代理;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
