@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dffa399-5343-436c-b3ca-bb5e39e2d576" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java" afterDir="false" />
+    <list default="true" id="8dffa399-5343-436c-b3ca-bb5e39e2d576" name="Default Changelist" comment="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考">
+      <change afterPath="$PROJECT_DIR$/src/main/java/JASON的使用/fastjson的解析.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Students.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,11 +63,53 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
+            <state relative-caret-position="540">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用/fastjson的解析.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Students.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/itwei/annotion/Mian.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/Host.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/itwei/annotion/jdkproxy/NewJdkProxy.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/itwei/annotion/newcglibproxy/cglib.java" />
         <option value="$PROJECT_DIR$/src/main/java/test_threadpool/FixedThreadPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/test_threadpool/Tongbusuo.java" />
@@ -113,6 +156,10 @@
         <option value="$PROJECT_DIR$/src/main/java/test_threadpool/SpeakUntil.java" />
         <option value="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil.java" />
         <option value="$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil" />
+        <option value="$PROJECT_DIR$/src/main/java/JASON的使用/fastjson的解析.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/Students.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java" />
       </list>
     </option>
   </component>
@@ -415,15 +462,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="annotion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestAnnotion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AnnotionAndDesignPatterns" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test_threadpool" type="462c0819:PsiDirectoryNode" />
+              <item name="JASON的使用" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TestAnnotion" type="b2602c69:ProjectViewProjectNode" />
@@ -443,12 +482,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569413536360" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569487280218" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29655173" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -468,22 +507,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestSpeakThread">
+  <component name="RunManager" selected="Application.xml解析">
     <configuration name="DeadLockTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test_threadpool.DeadLockTest1" />
-      <module name="TestAnnotion" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_threadpool.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FixedThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_threadpool.FixedThreadPool" />
       <module name="TestAnnotion" />
       <extension name="coverage">
         <pattern>
@@ -521,12 +547,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_threadpool.ThreadDemo" />
+    <configuration name="fastjson的解析" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JASON的使用.fastjson的解析" />
       <module name="TestAnnotion" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test_threadpool.*" />
+          <option name="PATTERN" value="JASON的使用.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="xml解析" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JASON的使用.xml解析" />
+      <module name="TestAnnotion" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JASON的使用.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -535,19 +574,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FixedThreadPool" />
-      <item itemvalue="Application.ThreadDemo" />
       <item itemvalue="Application.TestThread" />
       <item itemvalue="Application.DeadLockTest1" />
       <item itemvalue="Application.TestSpeakThread" />
+      <item itemvalue="Application.fastjson的解析" />
+      <item itemvalue="Application.xml解析" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.xml解析" />
+        <item itemvalue="Application.fastjson的解析" />
         <item itemvalue="Application.TestSpeakThread" />
         <item itemvalue="Application.TestThread" />
         <item itemvalue="Application.DeadLockTest1" />
-        <item itemvalue="Application.ThreadDemo" />
-        <item itemvalue="Application.FixedThreadPool" />
       </list>
     </recent_temporary>
   </component>
@@ -563,7 +602,7 @@
       <updated>1569292670831</updated>
       <workItem from="1569292672048" duration="3653000" />
       <workItem from="1569296343133" duration="18697000" />
-      <workItem from="1569397238138" duration="4506000" />
+      <workItem from="1569397238138" duration="10689000" />
     </task>
     <task id="LOCAL-00001" summary="threadpool">
       <created>1569397437678</created>
@@ -579,17 +618,24 @@
       <option name="project" value="LOCAL" />
       <updated>1569397457307</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考">
+      <created>1569413427745</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569413427745</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26856000" />
+    <option name="totallyTimeSpent" value="33039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -599,7 +645,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3485342" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29858848" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -629,7 +675,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="threadpool" />
-    <option name="LAST_COMMIT_MESSAGE" value="threadpool" />
+    <MESSAGE value="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考" />
+    <option name="LAST_COMMIT_MESSAGE" value="线程之间的通讯 等待，唤醒 添加 threadspeakuntil 文件作为参考" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,13 +752,6 @@
           <folding>
             <element signature="e#287#288#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
@@ -821,8 +861,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test_threadpool/ThreadSpeakUntil">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
+        <state relative-caret-position="540">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用/fastjson的解析.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Students.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JASON的使用/xml解析.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

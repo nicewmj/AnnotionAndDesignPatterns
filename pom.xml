@@ -34,7 +34,26 @@
       <version>2.2.2</version>
     </dependency>
 
+<!--使用fastjson解析json 所需的依赖包-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.53</version>
+    </dependency>
 
+
+      <!--使用dom4j解析xml需要的jar包  https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+      <dependency>
+          <groupId>org.dom4j</groupId>
+          <artifactId>dom4j</artifactId>
+          <version>2.1.1</version>
+      </dependency>
+    <!-- https://mvnrepository.com/artifact/jaxen/jaxen -->
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+      <version>1.1-beta-10</version>
+    </dependency>
 
   </dependencies>
 
