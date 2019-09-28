@@ -4,6 +4,11 @@ public class UserEnity {
     private String userId;
     private  String  userName;
 
+    public UserEnity(String userId, String userName) {
+        this.userId = userId;
+        this.userName = userName;
+    }
+
     public String getUserId() {
         return userId;
     }
@@ -18,5 +23,14 @@ public class UserEnity {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserEnity{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                '}';
     }
 }
