@@ -34,5 +34,4 @@ class Test {
         Host o = (Host) Proxy.newProxyInstance(xiaoMing.getClass().getClassLoader(), xiaoMing.getClass().getInterfaces(), newJdkProxy);
         o.mia();
     }
-
 }

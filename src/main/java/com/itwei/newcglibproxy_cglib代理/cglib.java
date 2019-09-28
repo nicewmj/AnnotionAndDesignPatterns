@@ -1,7 +1,7 @@
-package com.itwei.newcglibproxy_cglib代理;
+package com.itwei.annotion.newcglibproxy;
 
-import com.itwei.jdkproxy_jdk代理.Host;
-import com.itwei.staticproxy_静态代理.XiaoMing;
+import com.itwei.annotion.jdkproxy.Host;
+import com.itwei.annotion.staticproxy.XiaoMing;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
