@@ -1,6 +1,5 @@
-package sql;
+package sql01;
 
-import com.sun.javafx.property.JavaBeanAccessHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;

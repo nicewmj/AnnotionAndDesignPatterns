@@ -1,4 +1,4 @@
-package sql;
+package sql01;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
